@@ -23,7 +23,7 @@ html_template = """
 
 @app.route("/")
 def index():
-    return render_template_string(html,
+    return render_template_string(html_template,
                                     temperature=sensor_data["temperature"],
                                   humidity=sensor_data["humidity"],
                                   interval=settings["interval"])
